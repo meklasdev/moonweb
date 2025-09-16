@@ -1,10 +1,30 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 export default function DesignMock() {
+  const rootRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = rootRef.current?.querySelectorAll('.animate-on-scroll');
+    elements?.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="designmock-root">
+    <div className="designmock-root" ref={rootRef}>
       {/* background panel */}
       <div className="page-bg designmock-bg">
         {/* Navbar */}
@@ -32,7 +52,7 @@ export default function DesignMock() {
         <div className="designmock-hero-wrap">
           <div className="pixel-hero">
             <div className="pixel-lines">
-              <span className="pixel-line grad-pro-1">Profesjonalne realizacje</span>
+              <span className="pixel-line grad-pro-1 animate-on-scroll">Profesjonalne realizacje</span>
               <span className="pixel-base">MEKLAS_ CHIEF</span>
             </div>
             <div className="logo-pill designmock-logo-pill">
@@ -41,27 +61,27 @@ export default function DesignMock() {
             </div>
           </div>
           <div style={{ marginTop: 12 }}>
-            <img className="hero-banner" src="/banner.png" alt="banner" />
+            <img className="hero-banner animate-on-scroll" src="/banner.png" alt="banner" />
           </div>
         </div>
 
         {/* Big rounded card */}
-        <div className="designmock-big-card" />
+        <div className="designmock-big-card animate-on-scroll" />
 
         {/* Right image placeholder (user asset) */}
         <img
-          className="designmock-right-img dm-hero-image"
+          className="designmock-right-img dm-hero-image animate-on-scroll"
           src="/hero_zauflinam_zepol_ajeszce_powina_byc_media.png"
           alt="hero placeholder"
         />
 
         {/* White rotated strip behind ZAUFALI NAM */}
-        <div className="zaufali-strip">
+        <div className="zaufali-strip animate-on-scroll">
           <div className="zaufali-text">ZAUFALI NAM</div>
         </div>
 
         {/* Order card (simplified) */}
-        <div className="designmock-order-card">
+        <div className="designmock-order-card animate-on-scroll">
           <div className="designmock-order-title">zamowienie</div>
           <div style={{ height: 12 }} />
           <div className="designmock-order-progress">
@@ -80,21 +100,21 @@ export default function DesignMock() {
 
         {/* Small image card */}
         <img
-          className="designmock-small-img"
+          className="designmock-small-img animate-on-scroll"
           src="/portfolio_kontakt_brakujenav_bara.png"
           alt="phone"
         />
 
         {/* Portfolio band with two cards */}
-        <div className="designmock-portfolio">
-          <div className="portfolio-card">
+        <div className="designmock-portfolio animate-on-scroll">
+          <div className="portfolio-card animate-on-scroll">
             <img
               src="/file.svg"
               alt="p1"
               style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: 12 }}
             />
           </div>
-          <div className="portfolio-card">
+          <div className="portfolio-card animate-on-scroll">
             <img
               src="/file.svg"
               alt="p2"
@@ -104,8 +124,8 @@ export default function DesignMock() {
         </div>
 
         {/* Contact band with modal */}
-        <div className="designmock-contact">
-          <div className="contact-modal">
+        <div className="designmock-contact animate-on-scroll">
+          <div className="contact-modal animate-on-scroll">
             <div style={{ fontFamily: "Daydream", fontSize: 18, marginBottom: 8 }}>ZAMOWIENIE</div>
             <div style={{ height: 10 }} />
             <div style={{ display: "flex", gap: 8 }}>
