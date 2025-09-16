@@ -736,28 +736,7 @@ body {
   animation: slideInUp 1s ease-out 1.8s both;
 }
 
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
 
-    opacity: 1;
-    transform: rotate(-4deg) scale(1);
-  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-  padding: 18px;
-
-  box-shadow: 
-    0 32px 80px rgba(0,0,0,0.3),
-    inset 0 1px 0 rgba(255,255,255,0.8);
-  border: 1px solid rgba(255,255,255,0.5);
-  backdrop-filter: blur(12px);
-}
 
 /* Scroll animations */
 @media (prefers-reduced-motion: no-preference) {
