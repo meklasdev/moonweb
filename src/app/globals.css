@@ -459,13 +459,15 @@ body {
 
 
 .mc-cta-secondary:hover { 
-  background: rgba(255,255,255,0.15); 
   transform: translateY(-4px) scale(1.05);
-  background: linear-gradient(135deg, rgba(17,17,17,0.95) 0%, rgba(30,30,30,0.95) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(17,17,17,0.95) 0%,
+    rgba(30,30,30,0.95) 100%
+  );
+  box-shadow: 
     0 16px 40px rgba(255,255,255,0.1),
     0 8px 16px rgba(0,0,0,0.2);
-}
-  background: #ffffff;
   transform: rotate(-4deg);
   box-shadow: 0 10px 30px rgba(0,0,0,0.12);
   box-shadow: 
