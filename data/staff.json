@@ -1,0 +1,18 @@
+[
+  {
+    "id": "alex",
+    "name": "Alex Kowalski",
+    "role": "Lead Developer",
+  "nick": "Notch",
+  "skinUrl": "/skins/sample1.png",
+    "bio": "Pixel artist and backend engineer. Loves Minecraft skins."
+  },
+  {
+    "id": "marta",
+    "name": "Marta Nowak",
+    "role": "Community Manager",
+  "nick": "jeb_",
+  "skinUrl": "/skins/sample2.png",
+    "bio": "Builds community and keeps order."
+  }
+]

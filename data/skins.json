@@ -1,0 +1,16 @@
+[
+  {
+    "id": "sample-1",
+    "name": "Sample Skin 1",
+    "description": "Replace this URL with a real Minecraft skin PNG (put the file in public/skins/ or use an external URL)",
+    "tags": ["hero", "demo"],
+    "skinUrl": "/skins/sample1.png"
+  },
+  {
+    "id": "sample-2",
+    "name": "Sample Skin 2",
+    "description": "Another sample entry — replace with your skin URL",
+    "tags": ["player"],
+    "skinUrl": "/skins/sample2.png"
+  }
+]
