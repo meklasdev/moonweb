@@ -1,4 +1,3 @@
-import Image from "next/image";
 import DesignMock from "../components/DesignMock";
 
 export default function Home() {
