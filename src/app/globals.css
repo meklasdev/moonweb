@@ -604,24 +604,27 @@ body {
 }
 
 @keyframes slideInRight {
-  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  from {
     opacity: 0;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
     transform: translateX(50px);
   }
   to {
     opacity: 1;
     transform: translateX(0);
   }
-  align-items: center;
-
-
-  justify-content: center;
-  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.1) 100%);
 }
+
+.text-gradient {
+  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  align-items: center;
+  justify-content: center;
+  animation: slideInRight 1s ease forwards;
+}
+
 .portfolio-card {
   box-shadow: 
     0 12px 40px rgba(0,0,0,0.15),
