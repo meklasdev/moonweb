@@ -423,9 +423,9 @@ body {
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
   transition: left 0.6s;
   left: 0;
-
 .mc-cta:hover { 
   background: linear-gradient(135deg, #ec4899 0%, #a855f7 30%, #22d3ee 60%, #78716c 100%);
+  box-shadow: 
     0 16px 40px rgba(255,0,170,0.3),
     0 8px 16px rgba(0,0,0,0.2);
   border-color: rgba(255,255,255,0.4);
